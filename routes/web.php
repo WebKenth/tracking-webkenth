@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', 'TrackingController@shop');
+Route::get('/shop', 'TrackingController@shop');
+Route::get('/product', 'TrackingController@product');
+Route::get('/basket', 'TrackingController@basket');
+Route::get('/checkout', 'TrackingController@checkout');
+Route::get('/receipt', 'TrackingController@receipt');
